@@ -1,0 +1,25 @@
+package nomic;
+
+public class Nomic {
+	
+
+	
+	
+	Nomic(int players){
+		// TODO Auto-generated method stub
+		boolean playing = false;
+		User[] userList = new User[players];
+		
+		
+		
+		init(players);
+		while(playing){
+			userList[currentPlayer].takeTurn();
+			currentPlayer = (currentPlayer++)%players;
+		}	
+	}
+	
+	public static void Main(String[] args){
+		Game g = new Game(Integer.parseInt(args[0]));
+	}
+}

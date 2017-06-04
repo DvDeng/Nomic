@@ -1,0 +1,13 @@
+package nomic;
+
+import java.util.*;
+
+public abstract class User {
+	public void takeTurn(Map<int, Rule> ruleset){
+		
+	}
+		
+		ruleset.addRule(new Rule());
+		
+	}
+}

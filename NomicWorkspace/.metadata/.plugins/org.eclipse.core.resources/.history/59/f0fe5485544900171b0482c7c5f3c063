@@ -1,0 +1,30 @@
+package nomic;
+
+public class Nomic {
+	
+	static int currentPlayer;
+	
+	
+	public static void Nomic(int players){
+		// TODO Auto-generated method stub
+		boolean playing = false;
+		User[] userList = new User[players];
+		
+		
+		
+		init(players);
+		while(playing){
+		userList[currentPlayer].takeTurn();
+		currentPlayer = (currentPlayer++)%players;
+		}	
+	}
+	
+	private static void init(int players){
+		User[] userList = new User[players];
+		userList[0] = new Moderator();
+		for(int i = 1;i<players;i++){
+			userList[i] = new Player(); 
+		}
+		currentPlayer = (int)(Math.random()*players);
+	}
+}

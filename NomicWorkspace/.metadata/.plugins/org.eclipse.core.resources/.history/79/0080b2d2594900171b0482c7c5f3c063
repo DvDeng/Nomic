@@ -1,0 +1,12 @@
+package nomic;
+
+import java.util.*;
+
+public abstract class User {
+	public void takeTurn(Ruleset ruleset){
+	}
+		
+		ruleset.addRule(new Rule());
+		
+	}
+}

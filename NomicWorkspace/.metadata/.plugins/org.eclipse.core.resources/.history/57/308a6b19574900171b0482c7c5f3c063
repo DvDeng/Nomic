@@ -1,0 +1,15 @@
+package nomic;
+
+public class Ruleset {
+
+	Ruleset(String fileName){
+		
+	}
+	
+	public void addRule(Rule rule){
+		
+	}
+	
+	public int nextEmptyRule()
+	
+}

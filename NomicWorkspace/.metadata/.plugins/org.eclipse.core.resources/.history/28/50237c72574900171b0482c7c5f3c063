@@ -1,0 +1,7 @@
+package nomic;
+
+public abstract class User {
+	public void takeTurn(){
+		Ruleset.
+	}
+}
