@@ -1,0 +1,15 @@
+package test;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Test {
+	
+	public static void Main(String[] args){
+	JFrame frame = new JFrame("Nomic");
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
+	JLabel test = new JLabel("Hi");
+	frame.getContentPane().add(test);
+	frame.setVisible(true);
+	}
+}

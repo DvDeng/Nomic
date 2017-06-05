@@ -1,0 +1,12 @@
+package nomicGUI;
+
+import nomic.Game;
+
+public class ModeratorGUI extends UserGUI{
+
+	public ModeratorGUI(String title, Game game) {
+		super(title, game);
+		// TODO Auto-generated constructor stub
+	}
+
+}

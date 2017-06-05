@@ -1,9 +1,36 @@
 package nomic;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+
+import nomicGUI.ModeratorGUI;
+import nomicGUI.UserGUI;
 
 public abstract class User {
-	public void takeTurn(Game game){
+	
+	static String name;
+	UserGUI screen;
+	
+	User(String name){
+		screen = new ModeratorGUI(); 
+		this.name = name;
+	}
+	
+	public String suggestion(){
+		return screen.getSuggestion();
+	}
+	
+	public int vote(String suggestion){
+		return screen.getVote();
+	}
+
+	public void show(HashMap<User, Integer> votes, Rule rule) {
+		// TODO Auto-generated method stub
 		
+	}
+
+	public static String getName() {
+		// TODO Auto-generated method stub
+		return name;
 	}
 }

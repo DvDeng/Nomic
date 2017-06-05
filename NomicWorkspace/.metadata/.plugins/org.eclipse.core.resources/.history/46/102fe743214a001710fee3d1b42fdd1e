@@ -1,0 +1,41 @@
+package nomic;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class UserList {
+
+	User[] userList;
+	private int currentPlayer;
+	
+	UserList(int players){
+		userList = new User[players];
+		userList[0] = new Moderator("Player 1");
+		for(int i = 1;i<players;i++){
+			userList[i] = new Player("Player " + (i+1)); 
+		}
+		currentPlayer = (int)(Math.random()*players);
+	}
+	
+	public void nextTurn(Game game){
+		currentPlayer = (currentPlayer++)%userList.length; 
+	}
+	
+	public User currentPlayer(){
+		return userList[currentPlayer];
+	}
+	
+	public void vote(Rule rule){
+		HashMap<User, Integer> votes = new HashMap<User, Integer>();
+
+		for(int i=0; i<userList.length; i++){
+			votes.put(userList[i], userList[i].vote(rule.theRule));
+		}
+		userList[0].confirmVotes(votes);
+	}
+	
+	public int numberOfPlayers(){
+		return userList.length;
+	}
+	
+}

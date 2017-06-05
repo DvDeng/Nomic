@@ -1,0 +1,30 @@
+package nomic;
+
+public class UserList {
+
+	User[] userList;
+	int currentPlayer; 
+	
+	UserList(int players){
+		User[] userList = new User[players];
+		userList[0] = new Moderator("Player 1");
+		for(int i = 1;i<players;i++){
+			userList[i] = new Player("Player " + (i+1)); 
+		}
+		CurrentPlayer = (int)(Math.random()*players);
+	}
+	
+	public void nextTurn(Game game){
+		
+		currentPlayer = (currentPlayer++)%userList.numberOfPlayers();
+	}
+	
+	UserList(User[] userList){
+		this.userList = userList;
+	}
+	
+	public int numberOfPlayers(){
+		return userList.length;
+	}
+	
+}

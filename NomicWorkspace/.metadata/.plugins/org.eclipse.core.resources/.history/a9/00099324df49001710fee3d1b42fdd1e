@@ -1,0 +1,9 @@
+package nomic;
+
+public class Moderator extends User {
+	
+	Moderator(String name){
+		
+	}
+
+}

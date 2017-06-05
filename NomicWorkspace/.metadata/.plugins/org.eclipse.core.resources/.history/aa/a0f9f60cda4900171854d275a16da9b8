@@ -1,0 +1,12 @@
+package nomicGUI;
+
+import javax.swing.JFrame;
+
+public abstract class UserGUI {
+
+	
+	UserGUI(){
+	JFrame frame = new JFrame("Nomic");
+	frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+}

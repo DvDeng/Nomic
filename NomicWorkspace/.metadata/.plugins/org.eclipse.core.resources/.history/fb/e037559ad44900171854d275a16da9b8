@@ -1,0 +1,15 @@
+package nomic;
+
+public class Userlist {
+
+	User[] userlist;
+	
+	Userlist(int players){
+		User[] userList = new User[players];
+		userList[0] = new Moderator();
+		for(int i = 1;i<players;i++){
+			userList[i] = new Player(); 
+		}
+	}
+	
+}

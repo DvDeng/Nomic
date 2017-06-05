@@ -4,34 +4,49 @@ import java.util.Map;
 
 public class Game {
 
-	int currentPlayer;
-	User[] userList;
-	boolean playing = false;
-	Map<Integer,Rule> ruleset;
+	UserList userList;
+	Ruleset rules = new Ruleset();
+	boolean playing = false;	
 	Map<User,Integer> score;
+	Map<User,Integer> votes;
 
-	Game(int players){
-		User[] userList = new User[players];
-		userList[0] = new Moderator();
-		for(int i = 1;i<players;i++){
-			userList[i] = new Player(); 
-		}
-		currentPlayer = (int)(Math.random()*players);
+	Game(int players){	
+		userList = new UserList(players);
+		rules = new Ruleset();
 	}
 
-	public void load(String filename){
-
+	Game(String fileName){
+//		 Load a game from "fileName"
 	}
-
+	
 	public void play(){
-		while(playing){
-			userList[currentPlayer].takeTurn(this);
-			currentPlayer = (currentPlayer++)%userList.length;
-		}	
+		
+		testCase2();
+		
+//		playing = true;
+//		while(playing){
+//			Rule suggestion = new Rule(new Player("David").suggestion());
+//			rules.add(suggestion);
+//			System.out.println(userList.toString());
+//			userList.vote(suggestion);
+//			userList.userList[0].activateRule(suggestion);
+//			userList.userList[0].waitForConfirmation();
+//		}	
 	}
-
-	public void addRule(Rule rule, int id){
-		ruleset.put(id, rule);
+	
+	public void testCase1(){
+		rules.add(new Rule("rule 301", true));
+		for(int i=0;i<4;i++){
+			Rule suggestion = new Rule(userList.currentPlayer().suggestion());
+			rules.add(suggestion);		
+			userList.vote(suggestion);
+		}
+		System.out.println(rules.toString());
 	}
-
+	
+	public void testCase2(){
+		Rule suggestion = new Rule(userList.currentPlayer().suggestion());
+		rules.add(suggestion);
+		userList.vote(suggestion);	
+	}
 }

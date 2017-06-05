@@ -1,0 +1,19 @@
+package nomic;
+
+import nomicGUI.ModeratorGUI;
+
+public class Moderator extends User {
+
+	Moderator(String name) {
+		super(name);
+		screen = new ModeratorGUI();
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public void confirmVotes(int[] votes) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

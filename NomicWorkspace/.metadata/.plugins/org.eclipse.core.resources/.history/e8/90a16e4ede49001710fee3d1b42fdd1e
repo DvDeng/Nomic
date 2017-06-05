@@ -1,0 +1,5 @@
+package nomicGUI;
+
+public class PlayerGUI extends UserGUI{
+
+}

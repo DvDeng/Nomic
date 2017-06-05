@@ -1,0 +1,25 @@
+package nomic;
+
+import nomicGUI.UserGUI;
+
+public abstract class User {
+	
+	String name;
+	UserGUI screen;
+	
+	User(String name){
+		this.name = name;+
+	}
+	
+	public void takeTurn(Game game){
+		suggestRule();
+		vote();
+		endTurn();
+	}
+	
+	suggestRule
+	
+	public void vote(Game game){
+		
+	}
+}

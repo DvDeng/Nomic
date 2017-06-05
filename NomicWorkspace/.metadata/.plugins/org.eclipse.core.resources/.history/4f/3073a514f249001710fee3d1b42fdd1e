@@ -1,0 +1,30 @@
+package nomic;
+
+import nomicGUI.UserGUI;
+
+public abstract class User {
+	
+	String name;
+	UserGUI screen;
+	
+	User(String name){
+		this.name = name;
+	}
+	
+	public String suggestion(){
+		return screen.getSuggestion();
+	}
+	
+	public void vote(Game game, Rule rule){
+		
+	}
+	
+	public void waitForConfirmation(){
+		return;
+	}
+
+	public void activateRule(Rule rule) {
+		// TODO Auto-generated method stub
+		return;
+	}
+}

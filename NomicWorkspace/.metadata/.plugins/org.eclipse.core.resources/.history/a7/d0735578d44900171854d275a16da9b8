@@ -1,0 +1,37 @@
+package nomic;
+
+import java.util.Map;
+
+public class Game {
+
+	int currentPlayer;
+	Userlist userList;
+	Ruleset rules;
+	boolean playing = false;	
+	Map<User,Integer> score;
+
+	Game(int players){
+		
+		Userlist userList = new UserList(players);
+		
+		currentPlayer = (int)(Math.random()*players);
+		Ruleset rules = new Ruleset();
+	}
+
+	Game(String fileName){
+//		 Load a game from "fileName"
+		
+		
+	}
+	public void play(){
+		while(playing){
+			userList[currentPlayer].takeTurn(this);
+			currentPlayer = (currentPlayer++)%userList.length;
+		}	
+	}
+
+	public void addRule(Rule rule){
+		rules.add(rule);
+	}
+
+}

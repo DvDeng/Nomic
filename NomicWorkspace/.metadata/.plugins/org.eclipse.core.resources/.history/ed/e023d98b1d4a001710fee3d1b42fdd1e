@@ -1,0 +1,10 @@
+package nomic;
+
+public class Settings {
+
+	int votesRequired;
+	int[] votesPerPerson;
+	
+	
+	
+}

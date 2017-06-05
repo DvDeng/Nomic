@@ -1,0 +1,12 @@
+package nomic;
+
+public class Moderator extends User {
+	
+	Moderator(String name){
+		
+		this.name = name;
+		screen = new ModeratorGUI("Nomic Game");
+		
+	}
+
+}

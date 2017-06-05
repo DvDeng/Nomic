@@ -1,0 +1,30 @@
+package nomic;
+
+import java.util.Map;
+
+public class Ruleset {
+
+	Map<Integer, Rule> ruleset;
+	int nextRule;
+	
+	Ruleset(){
+// 		load standard Nomic Rules
+		nextRule = 301;
+	}
+	
+	Ruleset(Map<Integer, Rule> ruleset, int nextRule){
+		this.ruleset = ruleset;
+		this.nextRule = nextRule;
+	}
+	
+	public void add(Rule rule){
+		ruleset.put(nextRule, rule);
+		nextRule++;
+	}
+	
+	public Rule getRule(int i){
+			return ruleset.get(i);
+		
+	}
+	
+}

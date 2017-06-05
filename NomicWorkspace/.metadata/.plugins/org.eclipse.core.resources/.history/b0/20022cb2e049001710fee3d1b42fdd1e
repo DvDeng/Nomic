@@ -1,0 +1,9 @@
+package nomic;
+
+import nomicGUI.ModeratorGUI;
+
+public class Moderator extends User {
+	
+	
+
+}

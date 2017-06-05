@@ -1,0 +1,10 @@
+package nomic;
+
+public class Player extends User {
+
+	Player(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
+
+}

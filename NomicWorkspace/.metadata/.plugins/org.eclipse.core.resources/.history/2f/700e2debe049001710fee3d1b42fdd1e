@@ -1,0 +1,10 @@
+package nomicGUI;
+
+public class PlayerGUI extends UserGUI{
+
+	public PlayerGUI(String title) {
+		super(title);
+		// TODO Auto-generated constructor stub
+	}
+
+}

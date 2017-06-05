@@ -1,0 +1,14 @@
+package nomic;
+
+public abstract class User {
+	
+	String name;
+	
+	public void takeTurn(Game game){
+		
+	}
+	
+	public void vote(Game game){
+		
+	}
+}

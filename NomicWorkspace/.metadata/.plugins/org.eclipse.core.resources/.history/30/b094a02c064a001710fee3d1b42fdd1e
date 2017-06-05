@@ -1,0 +1,25 @@
+package nomic;
+
+import nomicGUI.ModeratorGUI;
+
+public class Moderator extends User {
+
+	Moderator(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public void waitForConfirmation(){
+		// wait for moderator to press next
+		
+		
+	}
+	
+	public void activateRule(Rule rule){
+		//let moderator activate or deactivate 
+		
+		
+	}
+	
+}

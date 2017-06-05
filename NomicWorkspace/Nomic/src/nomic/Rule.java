@@ -23,6 +23,25 @@ public class Rule {
 		this.mutable = mutable;
 		this.theRule = theRule;
 	}
+	
+	public String state(){
+		String state = "";
+		if(active){
+			state = "active";
+		}else{
+			state = "unactive";
+		}
+		if(mutable){
+			state = state + ", mutable";
+		}else{
+			state = state + ", unmutable";
+		}
+		return state;
+	}
+	
+	public String toString(){
+		return theRule;
+	}
 
 	public boolean isActive() {
 		return active;

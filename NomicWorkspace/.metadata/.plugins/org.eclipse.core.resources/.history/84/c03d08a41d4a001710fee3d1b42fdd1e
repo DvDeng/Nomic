@@ -1,0 +1,59 @@
+package nomic;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Map;
+
+public class Game {
+
+	UserList userList;
+	Ruleset rules = new Ruleset();
+	boolean playing = false;	
+	Map<User,Integer> score;
+	Map<User,Integer> votes;
+
+	Game(int players){	
+		userList = new UserList(players);
+		rules = new Ruleset();
+	}
+
+	Game(String fileName){
+//		 Load a game from "fileName"
+	}
+	
+	public void play(){
+		
+		testCase1();
+		
+//		playing = true;
+//		while(playing){
+//			Rule suggestion = new Rule(new Player("David").suggestion());
+//			rules.add(suggestion);
+//			System.out.println(userList.toString());
+//			userList.vote(suggestion);
+//			userList.userList[0].activateRule(suggestion);
+//			userList.userList[0].waitForConfirmation();
+//		}	
+	}
+	
+	public void testCase1(){
+		rules.add(new Rule("rule 301", true));
+		for(int i=0;i<4;i++){
+			Rule suggestion = new Rule(userList.currentPlayer().suggestion());
+			rules.add(suggestion);		
+			if(majority(userList.vote(suggestion))){
+				suggestion.setActive(true);
+			}
+		}
+		System.out.println(rules.toString());
+	}
+	
+	public boolean majority(int[] votes){
+		int sum=0;
+		for(int i=0;i<votes.length;i++){
+			sum += votes[i];
+		}
+		return(sum>(votes.length/2));
+	}
+}

@@ -1,16 +1,25 @@
 package nomic;
 
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
 public class Nomic {
 	
-
-	
-	
-	Nomic(int players){
+	public static void main(String[] args){
+		Game g;
 		
-	}
-	
-	public static void Main(String[] args){
-		Game g = new Game(Integer.parseInt(args[0]));
-		g.play();
+		if(args[0].equals("new")){
+			g = new Game(Integer.parseInt(args[1]));
+			
+		}else if(args[0].equals("load")){
+			g = new Game(args[1]);
+		}
+		else{
+			System.out.println("Type new + n for a new game with n players");
+			System.out.println("Type load + fileName to load a exsisting game with the name fileName");
+			return;
+		}
+		g.play();	
 	}
 }

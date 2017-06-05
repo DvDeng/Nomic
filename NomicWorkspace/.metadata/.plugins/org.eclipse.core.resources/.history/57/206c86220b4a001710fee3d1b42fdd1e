@@ -1,0 +1,65 @@
+package nomic;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Map;
+
+public class Game {
+
+	UserList userList;
+	Ruleset rules = new Ruleset();
+	boolean playing = false;	
+	Map<User,Integer> score;
+	Map<User,Integer> votes;
+
+	Game(int players){	
+		userList = new UserList(players);
+		Ruleset rules = new Ruleset();
+	}
+
+	Game(String fileName){
+//		 Load a game from "fileName"
+	}
+	
+	public String ask(int ruleNr){
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter rule " + ruleNr);
+		try {
+			return br.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	
+	public void play(){
+		
+		testCase1();
+		
+//		playing = true;
+//		while(playing){
+//			Rule suggestion = new Rule(new Player("David").suggestion());
+//			rules.add(suggestion);
+//			System.out.println(userList.toString());
+//			userList.vote(suggestion);
+//			userList.userList[0].activateRule(suggestion);
+//			userList.userList[0].waitForConfirmation();
+//		}	
+	}
+	
+	public void testCase1(){
+		rules.add(new Rule("rule 301"));
+		rules.add(new Rule("rule 302"));
+		rules.add(new Rule("rule 303"));
+		Rule suggestion = new Rule(userList.currentPlayer().suggestion());
+		System.out.println(suggestion.toString());
+		rules.add(suggestion);
+		System.out.println(userList.toString());
+		
+		System.out.println(rules.toString());
+		System.out.println(userList.vote(suggestion).toString());
+	}
+}

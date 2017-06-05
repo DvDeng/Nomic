@@ -1,0 +1,24 @@
+package nomicGUI;
+
+import javax.swing.*;
+
+
+public abstract class UserGUI {
+	
+	JFrame frame;
+	
+	
+	UserGUI(String title){
+		
+	createWindow(title);
+	
+	}
+	
+	public void createWindow(String title){
+		
+		JFrame frame = new JFrame(title);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		
+	}
+}

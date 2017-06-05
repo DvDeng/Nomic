@@ -1,0 +1,25 @@
+package nomicGUI;
+
+import java.io.BufferedReader;
+
+import nomic.Game;
+
+public class ModeratorGUI extends UserGUI{
+
+	public ModeratorGUI() {
+		super();
+
+		// TODO Auto-generated constructor stub
+	}
+	
+	public boolean askBoolean(String question){
+		BufferedReader br = new BufferedReader(System.in);
+		System.out.println(question);
+		if(br.equals("Yes")){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+}

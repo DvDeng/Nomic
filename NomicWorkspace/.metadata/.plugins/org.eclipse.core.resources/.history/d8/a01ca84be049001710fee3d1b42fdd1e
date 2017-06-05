@@ -1,0 +1,10 @@
+package nomicGUI;
+
+public class ModeratorGUI extends UserGUI{
+
+	ModeratorGUI(String title) {
+		super(title);
+		// TODO Auto-generated constructor stub
+	}
+
+}

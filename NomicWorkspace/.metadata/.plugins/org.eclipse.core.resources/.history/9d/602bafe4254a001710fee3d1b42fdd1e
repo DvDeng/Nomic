@@ -1,0 +1,23 @@
+package nomic;
+
+import java.util.HashMap;
+
+import nomicGUI.ModeratorGUI;
+
+public class Moderator extends User {
+
+	Moderator(String name) {
+		super(name);
+		screen = new ModeratorGUI();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void confirmRule(HashMap<User, Integer> votes, Rule rule) {
+		screen.show(votes );
+		String playersVotes;
+		for(int i = 0; i<votes.keySet().size())
+		
+		if(confirm();
+	}
+	
+}

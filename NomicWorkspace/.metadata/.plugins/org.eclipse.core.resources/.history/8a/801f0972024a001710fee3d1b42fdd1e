@@ -1,0 +1,43 @@
+package nomic;
+
+import java.util.*;
+
+public class Ruleset {
+
+	Map<Integer, Rule> ruleset = new HashMap<Integer, Rule>();
+	int nextRule;
+	
+	Ruleset(){
+// 		load standard Nomic Rules
+		ruleset = new HashMap<Integer, Rule>();
+		nextRule = 301;
+	}
+	
+	Ruleset(Map<Integer, Rule> ruleset, int nextRule){
+		this.ruleset = ruleset;
+		this.nextRule = nextRule;
+	}
+	
+	public void add(Rule rule){
+		ruleset.put(nextRule, rule);
+		nextRule++;
+	}
+	
+	public Rule getRule(int i){
+			return ruleset.get(i);
+		
+	}
+	
+	public String toString(){	
+		
+		Iterator<Integer> rules = ruleset.keySet().iterator();
+		
+		String string = "";
+		while(rules.hasNext()){
+			Integer id;
+			id = (Integer) rules.next();
+			string = string + id.toString() + ".\n(" + ruleset.get(id).state() + ")\n" + ruleset.get(id).toString() + "\n\n";
+		}	
+		return string;
+	}
+}
