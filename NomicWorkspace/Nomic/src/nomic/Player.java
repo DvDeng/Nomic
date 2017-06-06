@@ -1,13 +1,22 @@
 package nomic;
 
-import nomicGUI.PlayerGUI;
+public class Player{
+	
+	String name;
+	int score;
 
-public class Player extends User {
-
-	Player(String name) {
-		super(name);
-		screen = new PlayerGUI();
-		// TODO Auto-generated constructor stub
+	Player(String name){
+		this.name = name;
+		score = 0;
 	}
+	
+	public String getName(){
+		return name;
+	}
+	
+	public void setScore(int score){
+		this.score = score;
+	}
+	
 
 }
