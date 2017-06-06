@@ -1,7 +1,0 @@
-package nomic;
-
-public class Userlist {
-
-	User[] userlist;
-	
-}

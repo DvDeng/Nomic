@@ -1,7 +1,0 @@
-package nomic;
-
-public abstract class User {
-	public void takeTurn(Game game){
-		
-	}
-}
