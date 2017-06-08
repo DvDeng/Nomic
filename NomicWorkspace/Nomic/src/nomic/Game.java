@@ -1,52 +1,43 @@
 package nomic;
 
-import java.util.Map;
+import java.util.*;
 
 public class Game {
 
-	UserList userList;
-	Ruleset rules = new Ruleset();
+	List<Player> userList;
+	List<Rule> rules;
 	boolean playing = false;	
-	Map<User,Integer> score;
-	Map<User,Integer> votes;
+	Map<Player,Integer> score;
+	Map<Player,Integer> votes;
 
 	Game(int players){	
-		userList = new UserList(players);
-		rules = new Ruleset();
+		userList = new ArrayList<Player>();
+		for(int i=0;i<players;i++){
+			userList.add(new Player("Spelare" + i));
+		}
+		rules = new LinkedList<Rule>();
 	}
 
 	Game(String fileName){
-//		 Load a game from "fileName"
+//		Load a game from "fileName"
 	}
 	
 	public void play(){
-		
-		testCase2();
-		
-//		playing = true;
-//		while(playing){
-//			Rule suggestion = new Rule(new Player("David").suggestion());
-//			rules.add(suggestion);
-//			System.out.println(userList.toString());
-//			userList.vote(suggestion);
-//			userList.userList[0].activateRule(suggestion);
-//			userList.userList[0].waitForConfirmation();
-//		}	
+//		Game Logic
 	}
 	
-	public void testCase1(){
-		rules.add(new Rule("rule 301", true));
-		for(int i=0;i<4;i++){
-			Rule suggestion = new Rule(userList.currentPlayer().suggestion());
-			rules.add(suggestion);		
-			userList.vote(suggestion);
+	private void vote(Rule rule){
+		
+	}
+	
+	public void setScore(String name, int score){
+		Iterator<Player> iterator = userList.iterator();
+		Player player;
+		while(iterator.hasNext()){
+			player = iterator.next();
+			if(player.getName().equals(name)){
+				player.setScore(score);
+			}
 		}
-		System.out.println(rules.toString());
-	}
-	
-	public void testCase2(){
-		Rule suggestion = new Rule(userList.currentPlayer().suggestion());
-		rules.add(suggestion);
-		userList.vote(suggestion);	
 	}
 }
