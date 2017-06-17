@@ -1,9 +1,0 @@
-package nomicGUI;
-
-public class OtherPlayerGUI {
-
-	OtherPlayer(Game game, int PlayerID){
-		
-	}
-	
-}

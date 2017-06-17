@@ -8,3 +8,40 @@
 1496775674622	Delete element
 1496775687606	Delete element
 1496775693530	Delete element
+1497118919460	Rename type 'ModeratorWindow'
+1497120185672	Delete element
+1497124093712	Rename package 'nomic'
+1497128196292	Rename type 'ConfirmBox'
+1497138794741	Delete element
+1497138848520	Delete element
+1497138854693	Delete element
+1497138858095	Delete element
+1497138863447	Delete element
+1497151728804	Delete element
+1497152494330	Delete element
+1497176831179	Copy package
+1497176836406	Delete element
+1497176891086	Move package
+1497176911613	Rename source folder 'src'
+1497177110831	Rename source folder 'GUI'
+1497177156439	Delete element
+1497177170013	Rename source folder '-'
+1497177244658	Delete element
+1497177257019	Rename source folder 'GUI'
+1497177266219	Delete element
+1497177270533	Move package
+1497177274053	Delete element
+1497177297669	Copy package
+1497177321148	Copy package
+1497177334749	Delete element
+1497177460482	Rename package 'moderatorView'
+1497177494247	Rename source folder 'Nomic'
+1497177526640	Move compilation unit
+1497177529678	Move compilation unit
+1497177532174	Move compilation unit
+1497177535564	Move compilation unit
+1497195188359	Rename package 'nomicGUI.gameView'
+1497195209893	Rename package 'nomicGUI.moderatorView'
+1497195521511	Move compilation unit
+1497195529620	Move compilation unit
+1497196211110	Rename type 'SuggestRuleView'

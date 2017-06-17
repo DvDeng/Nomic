@@ -1,5 +1,0 @@
-package nomicGUI;
-
-public abstract class UserGUI {
-
-}
